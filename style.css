@@ -129,6 +129,16 @@ section img#treeLantern
     z-index: 10;
 
 }
+/* Footer Styles */
+footer {
+    background: #222;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
 
 #text
 {
@@ -167,3 +177,69 @@ section img#treeLantern
     font-size: 1.2em;
     color:#fff
 } 
+/* Modal - Hidden by default */
+.modal {
+    display: none; /* Hidden initially */
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(0.8);
+    width: 60%;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+
+    /* Animation Setup */
+    opacity: 0;
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+/* When modal is active */
+.modal.show {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal button {
+    background: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.modal button:hover {
+    background: #d4a500;
+}
+
+.modal p {
+    margin: 10px 0;
+    font-size: 18px;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+    color: white;
+}
+
+
